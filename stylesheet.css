@@ -1,6 +1,4 @@
-/* * {
-  border: 1px solid red;
-} */
+
 
 body {
   background-color: #c4dafc;
@@ -8,6 +6,9 @@ body {
 }
 a:hover {
     color: red;
+}
+p {
+  text-align: center;
 }
 
 header {
@@ -25,18 +26,21 @@ img {
   box-shadow: 10px 5px 5px gray;
 }
 
+.nav-list {
+  text-align: right;
+
+}
 .nav-list a {
   text-decoration: none;
-  display: block;
 }
 .nav-list ul {
-  float: right;
   margin: 0;
   padding: 35px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-list-item {
-  float: left;
   text-decoration: none;
   margin: 0;
   padding: 14px;
@@ -78,11 +82,25 @@ img {
 
 .image {
   flex-basis: 30%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }
 
 @media (min-width: 768px) {
   .gallery {
-    display: flex;
     justify-content: space-between;
   }
+}
+
+@media (max-width: 768px) {
+    .nav-ul {
+        flex-direction: column;
+    }
 }
